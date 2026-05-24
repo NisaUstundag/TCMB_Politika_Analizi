@@ -4,7 +4,7 @@ Bu proje, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yayınlanan Par
 
 ---
 
-## 🎯 Projenin Amacı ve Temel Problemi
+##  Projenin Amacı ve Temel Problemi
 Ekonomi dünyasında Merkez Bankası'nın kullandığı dil, piyasa beklentilerini şekillendiren en kritik unsurdur. Ancak bu metinlerin manuel analizi;
 1. **Sübjektiftir:** Kişiden kişiye değişen yorumlara açıktır, yanılma payı yüksektir.
 2. **Zaman Alıcıdır:** Karar anında hızlı ve algoritmik aksiyon almayı zorlaştırır.
@@ -13,7 +13,7 @@ Ekonomi dünyasında Merkez Bankası'nın kullandığı dil, piyasa beklentileri
 
 ---
 
-## 🛠️ Teknik Metodoloji
+##  Teknik Metodoloji
 Proje, ham veriden nihai risk öngörüsüne kadar uçtan uca bir makine öğrenmesi boru hattı (pipeline) üzerine kurgulanmıştır.
 
 ### 1. Veri Kaynağı ve Güvenilirlik
@@ -35,7 +35,7 @@ Modelimiz bir "Kara Kutu" (Black Box) değildir. Ürettiği risk tahmininin gere
 
 ---
 
-## 🚀 Öne Çıkan Özellikler
+##  Öne Çıkan Özellikler
 * **Canlı Çıkarım (Inference):** Yeni yayınlanan metinleri anlık olarak analiz edebilme yeteneği.
 * **Dinamik Sentez:** Kelime sinyalleri ile makine öğrenmesi tahminini çapraz kontrol ederek tutarlı raporlama sunma.
 * **İnteraktif Dashboard:** Streamlit tabanlı, kurumsal standartlarda kullanıcı dostu arayüz.
@@ -47,7 +47,7 @@ Modelimiz bir "Kara Kutu" (Black Box) değildir. Ürettiği risk tahmininin gere
 
 ---
 
-## 📋 Kurulum ve Çalıştırma
+##  Kurulum ve Çalıştırma
 Sistem Python tabanlı olup Streamlit kütüphanesi üzerinden çalışmaktadır. Projeyi yerel ortamınızda ayağa kaldırmak için aşağıdaki adımları takip edebilirsiniz:
 
 ```bash
