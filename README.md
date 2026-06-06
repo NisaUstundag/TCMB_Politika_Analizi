@@ -1,58 +1,61 @@
-# 📈 NLP Tabanlı Finansal Erken Uyarı ve Karar Destek Sistemi
+# NLP-Based Financial Early Warning and Decision Support System 🚀
 
-Bu proje, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yayınlanan Para Politikası Kurulu (PPK) duyuru metinlerini **Doğal Dil İşleme (NLP)** ve **Makine Öğrenmesi (ML)** yöntemleriyle analiz ederek, enflasyon riskini (Düşük/Orta/Yüksek) öngörmeyi amaçlayan bir FinTech çözümüdür.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) ![NLP](https://img.shields.io/badge/NLP-005571?style=for-the-badge) ![Machine Learning](https://img.shields.io/badge/Machine_Learning-8E75B2?style=for-the-badge)
 
----
-
-##  Projenin Amacı ve Temel Problemi
-Ekonomi dünyasında Merkez Bankası'nın kullandığı dil, piyasa beklentilerini şekillendiren en kritik unsurdur. Ancak bu metinlerin manuel analizi;
-1. **Sübjektiftir:** Kişiden kişiye değişen yorumlara açıktır, yanılma payı yüksektir.
-2. **Zaman Alıcıdır:** Karar anında hızlı ve algoritmik aksiyon almayı zorlaştırır.
-
-**Bu sistem**, metinlerdeki "Şahin" (sert/mücadeleci) ve "Güvercin" (ılımlı/destekleyici) tonu matematiksel bir skora dökerek, veriye dayalı, objektif ve saniyeler içinde çalışan bir **Erken Uyarı Sistemi** sunmaktadır.
+This project is a FinTech solution aiming to predict inflation risk (Low/Medium/High) by analyzing the Monetary Policy Committee (MPC) announcement texts published by the Central Bank of the Republic of Turkey (CBRT) using **Natural Language Processing (NLP)** and **Machine Learning (ML)** methods.
 
 ---
 
-##  Teknik Metodoloji
-Proje, ham veriden nihai risk öngörüsüne kadar uçtan uca bir makine öğrenmesi boru hattı (pipeline) üzerine kurgulanmıştır.
+## Project Purpose and Core Problem
+In the economic world, the language used by the Central Bank is the most critical factor shaping market expectations. However, manual analysis of these texts is:
+1. **Subjective:** It is open to individual interpretation and has a high margin of error.
+2. **Time-Consuming:** It makes it difficult to take fast and algorithmic actions at the moment of decision.
 
-### 1. Veri Kaynağı ve Güvenilirlik
-* **Resmi Kaynak:** 2006-2025 yıllarını kapsayan PPK metinleri ve enflasyon verileri doğrudan **TCMB EVDS** (Elektronik Veri Dağıtım Sistemi) üzerinden çekilmiştir.
-* **Veri İşleme:** Model, tamamen gerçek ve resmi devlet verileriyle eğitilerek doğruluğu maksimize edilmiştir.
+**This system** provides a data-driven, objective, and fast-acting **Early Warning System** by mathematically scoring the "Hawkish" (strict/combative) and "Dovish" (mild/supportive) tones in the texts.
 
-### 2. Algoritma Seçimi (Model Yarıştırma)
-Proje kapsamında 5 farklı denetimli öğrenme algoritması aynı veri seti üzerinde performans testine tabi tutulmuştur:
+---
+
+## Technical Methodology
+The project is built on an end-to-end machine learning pipeline from raw data to the final risk prediction.
+
+### 1. Data Source and Reliability
+* **Official Source:** MPC texts and inflation data covering the years 2006-2025 were pulled directly from the **CBRT EVDS** (Electronic Data Delivery System).
+* **Data Processing:** The model's accuracy was maximized by training it entirely on real and official government data.
+
+### 2. Algorithm Selection (Model Comparison)
+Within the scope of the project, 5 different supervised learning algorithms were subjected to performance testing on the same dataset:
 * **Naive Bayes**
 * **Decision Tree**
 * **K-Nearest Neighbors (KNN)**
 * **Support Vector Machines (SVM)**
 * **Random Forest**
 
-Yapılan analizler ve çapraz doğrulama sonuçlarına göre en kararlı performansı sergileyen **Random Forest**, ana tahmin motoru olarak seçilmiştir.
+Based on the analyses and cross-validation results, **Random Forest**, which demonstrated the most stable performance, was selected as the main prediction engine.
 
-### 3. Açıklanabilir Yapay Zeka (XAI)
-Modelimiz bir "Kara Kutu" (Black Box) değildir. Ürettiği risk tahmininin gerekçesini (kelime ağırlıkları, tonlama skoru ve geçmiş veri örüntüleri) şeffaf bir şekilde raporlayarak **Karar Destek Sistemi** görevini üstlenir.
-
----
-
-##  Öne Çıkan Özellikler
-* **Canlı Çıkarım (Inference):** Yeni yayınlanan metinleri anlık olarak analiz edebilme yeteneği.
-* **Dinamik Sentez:** Kelime sinyalleri ile makine öğrenmesi tahminini çapraz kontrol ederek tutarlı raporlama sunma.
-* **İnteraktif Dashboard:** Streamlit tabanlı, kurumsal standartlarda kullanıcı dostu arayüz.
+### 3. Explainable AI (XAI)
+Our model is not a "Black Box". It acts as a **Decision Support System** by transparently reporting the reasoning behind its risk prediction (word weights, tone score, and historical data patterns).
 
 ---
 
-## 👩‍💻 Geliştirici
-**Nisa Üstündağ** *Yazılım Mühendisliği Bölümü | Malatya Turgut Özal Üniversitesi*
+## Key Features
+* **Live Inference:** The ability to instantly analyze newly published texts.
+* **Dynamic Synthesis:** Providing consistent reporting by cross-checking word signals with the machine learning prediction.
+* **Interactive Dashboard:** A user-friendly, enterprise-standard interface based on Streamlit.
 
 ---
 
-##  Kurulum ve Çalıştırma
-Sistem Python tabanlı olup Streamlit kütüphanesi üzerinden çalışmaktadır. Projeyi yerel ortamınızda ayağa kaldırmak için aşağıdaki adımları takip edebilirsiniz:
+## Developer
+**Nisa Üstündağ** *Software Engineering Department 
+
+---
+
+## Installation and Setup
+The system is Python-based and runs via the Streamlit library. You can follow the steps below to run the project in your local environment:
 
 ```bash
-# Gerekli kütüphanelerin yüklenmesi
+# Install required libraries
 pip install streamlit pandas scikit-learn seaborn matplotlib
 
-# Uygulamanın başlatılması
+# Run the application
 streamlit run main.py
+```
